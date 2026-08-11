@@ -1,0 +1,22 @@
+{
+  "name": "deck-skeleton",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Starter project for @conveycode/deck, with a demo deck showcasing the rendering capabilities",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "pdf": "deck-pdf",
+    "pdf:all": "deck-pdf all",
+    "pdf:exercise": "deck-pdf exercise",
+    "pdf:correction": "deck-pdf correction"
+  },
+  "dependencies": {
+    "@conveycode/deck": "github:FabienSalles/deck",
+    "astro": "^5.1.1",
+    "mermaid": "^11.4.1",
+    "sass": "^1.83.0"
+  }
+}
