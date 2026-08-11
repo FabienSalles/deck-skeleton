@@ -85,11 +85,29 @@ npm run pdf:all
 npm run pdf -- slides demo/session-1
 ```
 
-## Configuration
+## Theming
 
-`astro.config.mjs` needs nothing beyond the integration. Options: `collection`,
-`contentBase`, `exercises`, `corrections`, `homePage`, `reveal`.
+`src/styles/theme-presentation.scss` is a copy of the package entry point,
+wired through `styles.presentation`. It gives three levers:
+
+1. **change the values** — `@use ... with ()` configures the Sass variables, and
+   a brand colour propagates through every sheet below it
+2. **choose the sheets and their order** — dropping a `@use` removes it from the
+   build, and the last one loaded wins at equal specificity
+3. **add your own rules** — anything after the `@use` block
+
+The same applies to `document` (exercise and correction pages, menus included)
+and `home`. Omit a key and the package entry is used.
 
 ```js
-integrations: [deck()]
+deck({
+  styles: {
+    presentation: '/src/styles/theme-presentation.scss',
+  },
+})
 ```
+
+## Configuration
+
+Options: `collection`, `contentBase`, `exercises`, `corrections`, `homePage`,
+`reveal`, `styles`.
