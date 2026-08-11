@@ -96,6 +96,10 @@ wired through `styles.presentation`. It gives three levers:
    build, and the last one loaded wins at equal specificity
 3. **add your own rules** — anything after the `@use` block
 
+Keep `global.scss` first in your copy: it carries the base resets and the
+`:root` block, whose custom properties are interpolated from the variables you
+just configured.
+
 The same applies to `document` (exercise and correction pages, menus included)
 and `home`. Omit a key and the package entry is used.
 

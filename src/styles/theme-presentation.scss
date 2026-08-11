@@ -12,6 +12,8 @@
 
 // 2. Choisir les feuilles et leur ordre. En retirer une l'écarte du rendu, et
 //    la dernière chargée l'emporte à spécificité égale.
+//    `global` porte les resets et le bloc :root : le garder en tête.
+@use '@conveycode/deck/styles/global.scss';
 @use '@conveycode/deck/styles/custom-theme.scss';
 @use '@conveycode/deck/styles/code-theme.scss';
 @use '@conveycode/deck/styles/mermaid-responsive.scss';
