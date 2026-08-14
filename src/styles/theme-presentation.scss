@@ -1,0 +1,23 @@
+// Thème des présentations.
+//
+// Copie de l'entrée du package, référencée depuis astro.config.mjs. Elle donne
+// trois leviers, du plus large au plus ciblé.
+
+// 1. Changer les valeurs. Elles se propagent à toutes les feuilles ci-dessous,
+//    donc une couleur de marque teinte le thème entier sans rien chercher.
+@use '@conveycode/deck/styles/variables.scss' with (
+  $brand-primary: #2563eb,
+  $brand-secondary: #7c3aed
+);
+
+// 2. Choisir les feuilles et leur ordre. En retirer une l'écarte du rendu, et
+//    la dernière chargée l'emporte à spécificité égale.
+//    `global` porte les resets et le bloc :root : le garder en tête.
+@use '@conveycode/deck/styles/global.scss';
+@use '@conveycode/deck/styles/custom-theme.scss';
+@use '@conveycode/deck/styles/code-theme.scss';
+@use '@conveycode/deck/styles/mermaid-responsive.scss';
+@use '@conveycode/deck/styles/exercise-menu.scss';
+@use '@conveycode/deck/styles/print.scss';
+
+// 3. Ajouter ses propres règles, après tout le reste.

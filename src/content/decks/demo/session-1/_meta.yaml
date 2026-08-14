@@ -1,0 +1,19 @@
+id: demo-session-1
+title: "Deck : démo des fonctionnalités"
+description: "Panorama des capacités de rendu du package deck"
+author: "Démo"
+date: "2026"
+duration: "20 minutes"
+level: beginner
+tags:
+  - démo
+  - reveal
+  - mermaid
+
+reveal:
+  controls: true
+  progress: true
+  slideNumber: "c/t"
+  hash: true
+  transition: "slide"
+  transitionSpeed: "default"
